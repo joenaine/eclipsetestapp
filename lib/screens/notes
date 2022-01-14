@@ -1,0 +1,19 @@
+Card(
+                      child: ListTile(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ProfilePage(
+                                user: item,
+                              ),
+                            ),
+                          );
+                        },
+                        leading: CircleAvatar(
+                          child: Text(item['id'].toString()),
+                        ),
+                        title: Text(item['username']),
+                        subtitle: Text(item['name']),
+                      ),
+                    ),
